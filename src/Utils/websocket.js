@@ -15,7 +15,8 @@ class WebSocketService {
   
     connect(chatUrl) {
       if(chatUrl){
-      const path = `ws://127.0.0.1:8000/ws/chat/${chatUrl}/`;
+      // const path = `ws://127.0.0.1:8000/ws/chat/${chatUrl}/`;
+      const path = `wss://api.locallyled.site/ws/chat/${chatUrl}/`;
       this.socketRef = new WebSocket(path);
       this.socketRef.onopen = () => {
         console.log('WebSocket open');
@@ -29,7 +30,7 @@ class WebSocketService {
       };
       this.socketRef.onclose = () => {
         console.log("WebSocket closed");
-        this.connect();
+        this.connect(chatUrl);
       };
     }
     }
@@ -40,6 +41,7 @@ class WebSocketService {
   
     socketNewMessage(data) {
       const parsedData = JSON.parse(data);
+      console.log(parsedData)
       let command;
       try{
         command = parsedData.message.command;

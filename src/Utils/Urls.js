@@ -1,4 +1,5 @@
-export const baseUrl = "http://localhost:8000"
+// export const baseUrl = "http://localhost:8000"
+export const baseUrl = "https://api.locallyled.site"
 export const login = "/api/token/";
 export const verifyToken = "/api/token/verify/";
 export const refreshToken = "/api/token/refresh/";
