@@ -12,7 +12,7 @@ function DestinationVideo() {
     <div className="video-main-container">
     <div className='video-container'>
         <div className="video-overlay"></div>
-            <video src={`${baseUrl}${destination?.video}`} autoPlay loop muted />
+            <img src={`${baseUrl}${destination?.image}`} alt={destination?.name} style={{height:"100%",width:"100%",objectFit:"cover"}}/>
         <div className="content">
             <h1 className='video-heading'>{destination?.name}</h1>
             <p className='video-para'>{destination?.country}</p>

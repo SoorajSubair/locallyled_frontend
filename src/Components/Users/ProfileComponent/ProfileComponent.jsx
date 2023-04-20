@@ -103,7 +103,7 @@ function ProfileComponent(props) {
                 }
             })
             .catch((error) => {
-                console.log(error.response.data)
+                console.log(error.response)
                 Swal.fire({
                 title: 'Error!',
                 text: error.response.data.username,

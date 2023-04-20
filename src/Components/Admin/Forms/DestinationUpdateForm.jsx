@@ -121,10 +121,10 @@ function DestinationUpdateForm() {
                 }
                 })
                 .catch((error) => {
-                console.log(error.response.data.image);
+                console.log(error);
                 Swal.fire({
                     title: 'Error!',
-                    text: error.response.data.image,
+                    text: 'unable to upload image',
                     icon: 'error'
                 });
                 });
